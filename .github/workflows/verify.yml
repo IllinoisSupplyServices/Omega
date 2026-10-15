@@ -1,0 +1,58 @@
+name: Verify documentation
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Required files and non-empty Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out proposed changes
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Verify documentation scaffold
+        shell: python
+        run: |
+          import pathlib
+          import subprocess
+          import sys
+
+          required = (
+              "README.md",
+              "AGENTS.md",
+              "docs/SYSTEM_MAP.md",
+              "docs/VERIFY.md",
+          )
+          errors = []
+          for name in required:
+              if not pathlib.Path(name).is_file():
+                  errors.append(f"Missing required file: {name}")
+
+          tracked = subprocess.check_output(["git", "ls-files", "-z"])
+          for raw_path in tracked.split(b"\0"):
+              if not raw_path:
+                  continue
+              path = pathlib.Path(raw_path.decode("utf-8"))
+              if path.suffix.lower() != ".md":
+                  continue
+              if not path.is_file():
+                  errors.append(f"Missing Markdown file: {path}")
+                  continue
+              try:
+                  content = path.read_text(encoding="utf-8")
+              except (OSError, UnicodeError) as error:
+                  errors.append(f"Cannot read Markdown file {path}: {error}")
+                  continue
+              if not content.strip():
+                  errors.append(f"Empty Markdown file: {path}")
+
+          if errors:
+              print("\n".join(errors), file=sys.stderr)
+              sys.exit(1)
+          print("PASS: required files exist and tracked Markdown is non-empty.")
