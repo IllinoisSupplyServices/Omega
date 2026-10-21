@@ -1,51 +1,44 @@
-# System map
+# OMEGA System Map — Current Authority and Historical Boundaries
 
-Omega is the engineering home of Fresh Start (Illinois Supply & Services). Three systems have distinct responsibilities.
-
-## Topology
+## Active authority
 
 ```text
-Google Drive: Fresh Start folder
-  authoritative workspace / department records
-            |
-            | authorized source consultation and pointers
-            v
-GitHub: Omega
-  engineering artifacts / tasks / branches / PRs / review / checks
-            ^
-            | repository context in; proposed changes and evidence out
-            |
-Codex Cloud
-  coding agent environments bound to these repositories
+Google Drive: OMEGA root ID 1YFfC0lUx4AK37_gJCGQJVndBJxNw-YkD
+  - sole 00_AI_START_HERE
+  - authoritative operating and evidence records
+  - dedicated agent workspaces, governed changes
+              |
+              | authorized context / source pointers, not secrets
+              v
+GitHub: IllinoisSupplyServices/omega-system
+  - current engineering foundation, PRs, tests, code and review
+              ^
+              | proposed changes / reproducible evidence
+              |
+Permitted agent environments
+  - capability and permission tested per executor
+  - no platform- or letter-derived authority
 ```
 
-This describes the working model, not proof of configured integrations or access.
+OMEGA GitHub coordination currently uses Issue #29 in `illinois-supply-services-intelligence`. This does not make that historical repository's older Fresh Start authority file current for OMEGA.
 
-## Google Drive — records authority
+## Read-only legacy sources
 
-The Fresh Start folder in Google Drive is the authoritative workspace. Department records remain there. Omega may hold pointers to those records and engineering artifacts needed to build or maintain systems; it must never hold copies of department records.
+Older **Fresh Start** (including old/new variants), this historical `Omega` scaffold, and legacy engineering source in `illinois-supply-services-intelligence` remain provenance/reference surfaces unless the owner authorizes a precisely bounded migration. OMEGA writes are confined to its dedicated Drive root. Never edit source records to resolve inconsistencies; copy authorized material with exact source identifiers instead.
 
-Consult the current authoritative source before work that depends on it. A repository pointer does not grant access or replace the record. No verified Drive folder URL is present in the repository; obtain the authorized pointer rather than inventing one. Do not create a parallel records workspace.
+## Agent operation
 
-## GitHub — engineering control plane
+Agent A, B, C, and D are identifiers only. No standing roles, ranks, specialties, privileges, or peer approval authority are assigned. Every executor must prove its own connector access. Use one bounded writer per shared artifact, independently challenge substantive work, maintain exact revisions, and follow complete-file change control for governing Drive documents.
 
-Omega contains engineering artifacts and pointers. GitHub provides the proposed-change boundary: tasks lead to branches and PRs, checks supply limited evidence, and a Verifier reviews the resulting diff and evidence. Nothing merges unreviewed.
+## This repository
 
-At scaffold time, the base repository contains a README; the existing agent-instructions PR supplies AGENTS.md. This scaffold adds system and verification documentation plus a documentation check. There is no application, dependency manifest, or application test suite to claim as validated.
+`IllinoisSupplyServices/Omega` is a historical documentation-stage scaffold; its documentation checks do not prove application behavior, deployment or repository rule enforcement. The active engineering foundation is `IllinoisSupplyServices/omega-system`. Do not merge or copy repositories automatically.
 
-## Codex Cloud — coding environments
+## Release conditions
 
-Codex Cloud provides coding agent environments bound to these repositories. An agent reads repository instructions and existing work, makes only authorized changes, runs available checks, and produces a PR with evidence. An environment is an execution workspace, not the authority for department records or an approval to merge.
-
-Environment bindings, credentials, Drive access, and branch protection must be confirmed through their actual configuration when needed; this document does not establish that they are configured.
-
-## Handoffs and boundaries
-
-1. Check existing work and evidence before acting. Reuse or extend the appropriate work instead of duplicating it.
-2. Consult Drive for authoritative business context, retaining only appropriate pointers in engineering artifacts.
-3. Perform engineering work in the repository through a Codex task and branch.
-4. Submit a PR describing the change, validation, exceptions, and dependencies.
-5. A Verifier inspects scope and evidence under [VERIFY.md](VERIFY.md). Corrections return to the PR.
-6. Merge only after review and applicable checks. Documentation alone does not enforce this rule; no repository settings are changed by this scaffold.
+- Confirm source provenance and destination IDs.
+- Check dependencies, tests, security, CI, and rollback.
+- Obtain independent substantive review and explicit owner authorization where required.
+- Never claim a running virtual desktop, enabled external sender, installed credential manager or production readiness from a README or PR alone.
 
 Return to [Start Here](../README.md).
