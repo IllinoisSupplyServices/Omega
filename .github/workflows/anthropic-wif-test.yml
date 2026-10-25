@@ -1,0 +1,67 @@
+name: anthropic-wif-test
+
+on:
+  push:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  call-claude:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch GitHub OIDC token
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const token = await core.getIDToken('https://api.anthropic.com');
+            core.setSecret(token);
+            core.exportVariable('JWT', token);
+
+      - name: Exchange for an Anthropic access token
+        shell: bash
+        env:
+          JWT: ${{ env.JWT }}
+        run: |
+          set -euo pipefail
+
+          response_file="$(mktemp)"
+          trap 'rm -f "$response_file"' EXIT
+
+          status="$(curl --silent --show-error \
+            --output "$response_file" \
+            --write-out '%{http_code}' \
+            --request POST https://api.anthropic.com/v1/oauth/token \
+            --header "content-type: application/json" \
+            --data "$(jq -n \
+              --arg assertion "$JWT" \
+              --arg rule "fdrl_01ModUHHNRd5eSwN3P3rymbD" \
+              --arg org "dc2c2d09-fe65-40da-97be-b1ca67a3db14" \
+              --arg service "svac_01GMALEGLGNznFMQTXdF9LDP" \
+              --arg workspace "wrkspc_013MoxW1F3igsQ8sbYvhcqjz" \
+              '{
+                grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+                assertion: $assertion,
+                federation_rule_id: $rule,
+                organization_id: $org,
+                service_account_id: $service,
+                workspace_id: $workspace
+              }')")"
+
+          if [[ "$status" -lt 200 || "$status" -ge 300 ]]; then
+            echo "Anthropic token exchange failed (HTTP $status)."
+            jq 'del(.access_token, .refresh_token, .id_token)' \
+              "$response_file" 2>/dev/null || true
+            exit 1
+          fi
+
+          if ! jq -e '.access_token | strings | length > 0' \
+            "$response_file" >/dev/null; then
+            echo "Exchange returned no usable access token."
+            jq 'del(.access_token, .refresh_token, .id_token)' \
+              "$response_file" 2>/dev/null || true
+            exit 1
+          fi
+
+          echo "Anthropic token exchange succeeded; token value withheld."
