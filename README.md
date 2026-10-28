@@ -7,10 +7,10 @@ This repository contains early OMEGA engineering documentation. It is **not** th
 - **Only OMEGA writable Drive root:** https://drive.google.com/drive/folders/1YFfC0lUx4AK37_gJCGQJVndBJxNw-YkD
 - **Sole canonical start document:** https://docs.google.com/document/d/1_wctzuvP2cVlBbMkrSc48HpdWTVZw09bXr87-1-s19Y/edit
 - **Directory registry:** document ID `1rRiVwxxQ4uMyt3yYtg83-IKqTZnBBlDzWL-h_qImpI8`
-- **Collaborative engineering board:** https://github.com/IllinoisSupplyServices/illinois-supply-services-intelligence/issues/29
+- **Coordination board: NONE** (owner decision, 2026-10-27). The former board — Issue #29 in `illinois-supply-services-intelligence` — was deleted with that repository by the owner on 2026-10-27, cold, with no archive and no replacement named. Agents take instructions from the owner directly.
 - **Current engineering foundation:** https://github.com/IllinoisSupplyServices/omega-system
 
-**Fresh Start (old and new) is READ-ONLY for OMEGA.** Never write, move, delete, or reorganize originals there. Copy sources into the authorized OMEGA root only with proper permission and provenance. This historical repository does not independently authorize any external action.
+**Fresh Start is HISTORICAL ONLY.** The Fresh Start Drive folders were trashed by the owner and permanently deleted on 2026-10-27; nothing there can be read, written, or restored, and no Fresh Start pointer is a live destination. Copy sources into the authorized OMEGA root only with proper permission and provenance. This historical repository does not independently authorize any external action.
 
 ## Repository boundaries
 
@@ -27,7 +27,7 @@ This repository remains available as historical evidence; do not migrate it whol
 
 ## Agent governance and review
 
-Agent A/B/C/D are identifiers, not assigned roles or authorities. Before changing shared state, consult the authoritative start document, read Issue #29, confirm nonoverlapping claims, preserve originals, and use branches and pull requests. Validate each change with actual tests and independent review; a passing documentation check is not runtime or production acceptance.
+Agent A/B/C/D are identifiers, not assigned roles or authorities. Before changing shared state, consult the authoritative start document, take instructions from the owner directly (there is no coordination board), confirm nonoverlapping claims, preserve originals, and use branches and pull requests. Validate each change with actual tests and independent review; a passing documentation check is not runtime or production acceptance.
 
 ## State
 

@@ -20,11 +20,11 @@ Permitted agent environments
   - no platform- or letter-derived authority
 ```
 
-OMEGA GitHub coordination currently uses Issue #29 in `illinois-supply-services-intelligence`. This does not make that historical repository's older Fresh Start authority file current for OMEGA.
+OMEGA has NO GitHub coordination board (owner decision, 2026-10-27). The former board — Issue #29 in `illinois-supply-services-intelligence` — was deleted with that repository by the owner on 2026-10-27, cold, with no archive and no replacement named. Agents take instructions from the owner directly.
 
-## Read-only legacy sources
+## Deleted legacy sources
 
-Older **Fresh Start** (including old/new variants), this historical `Omega` scaffold, and legacy engineering source in `illinois-supply-services-intelligence` remain provenance/reference surfaces unless the owner authorizes a precisely bounded migration. OMEGA writes are confined to its dedicated Drive root. Never edit source records to resolve inconsistencies; copy authorized material with exact source identifiers instead.
+Older **Fresh Start** folders and the legacy engineering source in `illinois-supply-services-intelligence` were DELETED by the owner on 2026-10-27 (the Fresh Start Drive folders permanently; the intelligence repository cold, with no archive). They survive only as provenance in surviving records and git history — they are not live or read-only surfaces. This historical `Omega` scaffold remains available as historical evidence. OMEGA writes are confined to its dedicated Drive root. Never edit source records to resolve inconsistencies; copy authorized material with exact source identifiers instead.
 
 ## Agent operation
 
