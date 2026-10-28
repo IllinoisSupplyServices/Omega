@@ -1,22 +1,13 @@
-# Agent instructions
+# Agent instructions — historical Omega scaffold
 
-## Project
-- The repository is named Omega in `README.md`. That file contains only the heading `# Omega`.
-- No application code is present; the project's purpose and behavior are not documented.
+This repo is a historical engineering evidence source, not OMEGA's active operational controller.
 
-## Setup
-- No dependency manifests, installation commands, environment configuration, or setup instructions are present. There is no documented dependency installation or environment preparation procedure.
+Read the current OMEGA root at https://drive.google.com/drive/folders/1YFfC0lUx4AK37_gJCGQJVndBJxNw-YkD and the sole `00_AI_START_HERE` before OMEGA activity. The current engineering foundation is https://github.com/IllinoisSupplyServices/omega-system. There is NO shared collaboration board (owner decision, 2026-10-27): the former board — Issue #29 in the now-deleted `illinois-supply-services-intelligence` repository — is gone and no replacement has been named. Agents take instructions from the owner directly.
 
-## Tests and checks
-- No tests, test runner, lint configuration, CI workflows, or governance checks are present. There are no repository-defined commands for running them.
-- Before finishing work, run the full test suite if one is available. Report the exact command and result honestly, including failures. If no suite exists, explicitly report that tests could not be run because none is defined.
+Agents A/B/C/D are identifiers only. No roles, specialties, hierarchy or approval authorities can be inferred from letters, model/provider names or this repo's historical content. Never overwrite another agent's claim.
 
-## Observable conventions
-- The existing content is a root-level `README.md` using a Markdown ATX heading.
-- No source layout, code naming, formatting, or language conventions can be inferred from the current repository.
+This repository has Markdown docs and a documentation-check workflow; do not claim it has a working desktop, production pipeline or comprehensive application tests. Run applicable defined checks, identify missing ones as NOT_TESTED, and provide exact logs and revision refs.
 
-## Guardrails
-- Never commit secrets, credentials, or tokens.
-- Never weaken or edit tests just to make them pass; fix the underlying code.
-- Keep changes minimal and focused on the task.
-- Ground repository guidance in files that actually exist; do not invent tools, commands, or structure.
+Fresh Start is historical only — its Drive folders were permanently deleted by the owner on 2026-10-27. All OMEGA writable Drive state must stay in its dedicated root. Never place secrets, banking details, signatures, tax documents or access tokens in GitHub. No production promotion or external actions without separate owner authorization.
+
+Changes require a fresh source read, isolated branch, documented diff, reproducible testing, independent review and readback. Shared governing Drive documents must be completely rewritten only under specific authorization and concurrency reconciliation; this repository does not give permission to edit those records.

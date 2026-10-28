@@ -6,7 +6,7 @@
 
 Before creating or changing anything, inspect the relevant existing files, task history, branches, PRs, and available verification evidence. Confirm the current state and authority of relevant sources. Reuse or extend existing work so work is never duplicated. If access is unavailable, report that limit rather than assuming the work does not exist.
 
-Keep department records in Google Drive's authoritative Fresh Start folder. Repository changes contain engineering artifacts and pointers, never copies of department records.
+Keep department records in the authoritative OMEGA Drive root (the Agents folder), under its canonical start document `00_AI_START_HERE`. Repository changes contain engineering artifacts and pointers, never copies of department records. Fresh Start pointers are obsolete — those folders were permanently deleted by the owner on 2026-10-27.
 
 ## Verification process
 

@@ -1,37 +1,34 @@
-# Omega — Start Here
+# Omega — Historical Engineering Scaffold
 
-Omega is the engineering home of **Fresh Start (Illinois Supply & Services)**.
+This repository contains early OMEGA engineering documentation. It is **not** the current operational authority or the owner-authorized working Drive location.
 
-## Authority rule
+## Current authority (owner directive, 2026-10-20)
 
-Google Drive's **Fresh Start** folder is the authoritative workspace. This repository holds engineering artifacts and pointers, never copies of department records. Consult the authoritative Drive record before acting; keep records and their updates in Drive.
+- **Only OMEGA writable Drive root:** https://drive.google.com/drive/folders/1YFfC0lUx4AK37_gJCGQJVndBJxNw-YkD
+- **Sole canonical start document:** https://docs.google.com/document/d/1_wctzuvP2cVlBbMkrSc48HpdWTVZw09bXr87-1-s19Y/edit
+- **Directory registry:** document ID `1rRiVwxxQ4uMyt3yYtg83-IKqTZnBBlDzWL-h_qImpI8`
+- **Coordination board: NONE** (owner decision, 2026-10-27). The former board — Issue #29 in `illinois-supply-services-intelligence` — was deleted with that repository by the owner on 2026-10-27, cold, with no archive and no replacement named. Agents take instructions from the owner directly.
+- **Current engineering foundation:** https://github.com/IllinoisSupplyServices/omega-system
 
-No verified Fresh Start folder URL exists in the current repository. Obtain the authorized folder link before accessing records; do not guess a destination or create a replacement workspace.
+**Fresh Start is HISTORICAL ONLY.** The Fresh Start Drive folders were trashed by the owner and permanently deleted on 2026-10-27; nothing there can be read, written, or restored, and no Fresh Start pointer is a live destination. Copy sources into the authorized OMEGA root only with proper permission and provenance. This historical repository does not independently authorize any external action.
 
-## Find your starting point
+## Repository boundaries
 
-| Need | Start here |
+This repository remains available as historical evidence; do not migrate it wholesale into `omega-system`. Reconcile each source file, tests, assumptions, dependencies, and conflicting instructions before reusing any implementation.
+
+| Need | Starting point |
 | --- | --- |
-| Department records and business source material | Google Drive's Fresh Start folder (authoritative workspace) |
-| System boundaries and handoffs | [System map](docs/SYSTEM_MAP.md) |
-| Agent repository instructions | [AGENTS.md](AGENTS.md) |
-| Evidence, checks, and outcome reporting | [Verification standard](docs/VERIFY.md) |
-| Automated scaffold checks | [verify workflow](.github/workflows/verify.yml) |
+| Active OMEGA instructions and operational evidence | Canonical Drive start document linked above |
+| Current reviewed engineering implementation | `omega-system` repository |
+| Historical repository topology | [System map](docs/SYSTEM_MAP.md) |
+| Agent repository guardrails | [AGENTS.md](AGENTS.md) |
+| Historical verification instructions | [Verification standard](docs/VERIFY.md) |
+| Documentation scaffold CI | [verify workflow](.github/workflows/verify.yml) |
 
-## Three-system map
+## Agent governance and review
 
-- **Google Drive = records authority.** Fresh Start's authoritative workspace and department records live here.
-- **GitHub = engineering control plane.** Omega holds engineering documentation, code when introduced, task discussions, pull requests, review, and check evidence.
-- **Codex Cloud = coding agent environments bound to these repositories.** Agents inspect a repository, carry out scoped engineering tasks, and propose changes through PRs.
+Agent A/B/C/D are identifiers, not assigned roles or authorities. Before changing shared state, consult the authoritative start document, take instructions from the owner directly (there is no coordination board), confirm nonoverlapping claims, preserve originals, and use branches and pull requests. Validate each change with actual tests and independent review; a passing documentation check is not runtime or production acceptance.
 
-See [SYSTEM_MAP.md](docs/SYSTEM_MAP.md) for the topology and boundaries.
+## State
 
-## How work flows
-
-1. Check existing files, tasks, branches, PRs, and available verification evidence before acting so work is never duplicated.
-2. Read the relevant repository instructions and consult authoritative Drive records when needed.
-3. Codex tasks produce focused PRs with a file summary, checks, evidence, and explicit limitations.
-4. A Verifier reviews the diff and evidence against the assignment. Producing an artifact is not verification.
-5. Nothing merges unreviewed. Checks support review; they do not authorize a merge.
-
-This is a documentation-stage repository. The verify workflow checks required files and non-empty Markdown; it does not validate business records, application behavior, or review approval.
+**HISTORICAL / NOT PRODUCTION READY.** This README corrects human-facing authority pointers only. It does not prove credentials, browser bindings, VM infrastructure, configured branch protection, or operational software. Git history preserves the prior text and its historical provenance.
